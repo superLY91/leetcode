@@ -26,15 +26,21 @@
 public class _189_RotateArray {
 
     public static void main(String[] args) {
-        int [] nums = new int[]{1,2};
-        int k = 3;
-        rotate(nums, k);
+        int[] nums = new int[]{1, 2, 3, 4, 5, 6};
+        int k = 2;
+        rotate4(nums, k);
         int len = nums.length;
         for (int i = 0; i < len; i++) {
             System.out.print(nums[i] + " ");
         }
     }
 
+    /**
+     * my solution
+     *
+     * @param nums
+     * @param k
+     */
     public static void rotate(int[] nums, int k) {
         int len = nums.length;
         int temp;
@@ -44,6 +50,82 @@ public class _189_RotateArray {
                 nums[j] = nums[j - 1];
             }
             nums[0] = temp;
+        }
+    }
+
+    /**
+     * Approach #1 Brute Force [Time Limit Exceeded]
+     * Time complexity : O(n * k)
+     * Space complexity: O(1)
+     */
+    public static void rotate1(int[] nums, int k) {
+        int temp, previous;
+        for (int i = 0; i < k; i++) {
+            previous = nums[nums.length - 1];
+            for (int j = 0; j < nums.length; j++) {
+                temp = nums[j];
+                nums[j] = previous;
+                previous = temp;
+            }
+        }
+    }
+
+    /**
+     * Approach #2 Using Extra Array [Accepted]
+     * Time complexity : O(n)
+     * Space complexity: O(n)
+     */
+    public static void rotate2(int[] nums, int k) {
+        int[] a = new int[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            a[(i + k) % nums.length] = nums[i];
+        }
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = a[i];
+        }
+    }
+
+    /**
+     * Approach #3 Using Cyclic Replacements [Accepted]
+     * Time complexity : O(n)
+     * Space complexity: O(1)
+     */
+    public static void rotate3(int[] nums, int k) {
+        k = k % nums.length;
+        int count = 0;
+        for (int start = 0; count < nums.length; start++) {
+            int current = start;
+            int prev = nums[start];
+            do {
+                int next = (current + k) % nums.length;
+                int temp = nums[next];
+                nums[next] = prev;
+                prev = temp;
+                current = next;
+                count++;
+            } while (start != current);
+        }
+    }
+
+    /**
+     * Approach #4 Using Reverse [Accepted]
+     * Time complexity : O(n)
+     * Space complexity: O(1)
+     */
+    public static void rotate4(int[] nums, int k) {
+        k %= nums.length;
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, k -1);
+        reverse(nums, k, nums.length - 1);
+    }
+
+    public static void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
         }
     }
 }
