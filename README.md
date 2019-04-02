@@ -9,7 +9,7 @@
 | 80       | Remove Duplicates from Sorted Array II        | ✓ |
 | 277      | Find the Celebrity                            |lock|
 | 189      | Rotate Array                                  | ✓ |
-| 41       | First Missing Positive                        |   |
+| 41       | First Missing Positive                        | ✓ |
 | 299      | Bulls and Cows                                |   |
 | 134      | Gas Station                                   |   |
 | 118      | Pascal's Triangle                             |   |
