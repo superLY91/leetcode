@@ -11,7 +11,7 @@
 | 189      | Rotate Array                                  | ✓ |
 | 41       | First Missing Positive                        | ✓ |
 | 299      | Bulls and Cows                                | ✓ |
-| 134      | Gas Station                                   |   |
+| 134      | Gas Station                                   | ✓ |
 | 118      | Pascal's Triangle                             |   |
 | 119      | Pascal's Triangle II                          |   |
 | 169      | Majority Element                              |   |
