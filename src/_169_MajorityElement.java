@@ -22,8 +22,8 @@ import java.util.HashMap;
 public class _169_MajorityElement {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1,1,1,2,2,2,2};
-        int majority = majorityElement2(nums);
+        int[] nums = new int[]{2,1,2,1,2,1,2};
+        int majority = majorityElement3(nums);
         System.out.println(majority);
     }
 
@@ -71,5 +71,24 @@ public class _169_MajorityElement {
         Arrays.sort(nums);
         return nums[nums.length/2];
 
+    }
+
+    /**
+     * Approach 6: Boyer-Moore Voting Algorithm
+     * @param nums
+     * @return
+     */
+    public static  int majorityElement3(int[] nums) {
+        int count = 0;
+        Integer candidate = null;
+
+        for (int num : nums) {
+            if (count == 0) {
+                candidate = num;
+            }
+            count += (num == candidate) ? 1 : -1;
+        }
+
+        return candidate;
     }
 }
