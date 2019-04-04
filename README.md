@@ -13,7 +13,7 @@
 | 299      | Bulls and Cows                                | ✓ |
 | 134      | Gas Station                                   | ✓ |
 | 118      | Pascal's Triangle                             | ✓ |
-| 119      | Pascal's Triangle II                          |   |
+| 119      | Pascal's Triangle II                          | ✓ |
 | 169      | Majority Element                              |   |
 | 229      | Majority Element II                           |   |
 | 274      | H-Index                                       |   |
