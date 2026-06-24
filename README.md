@@ -17,6 +17,7 @@ Java / Kotlin LeetCode 练习记录，按题目主类型分类。
 | 1 | Two Sum | Easy | [✅](src/j/easy/_0001_TwoSum.java) | - | 哈希表 |
 | 15 | 3Sum | Medium | [✅](src/j/medium/_0015_3Sum.java) | [✅](src/k/medium/_0015_3Sum.kt) | 排序 + 双指针 |
 | 26 | Remove Duplicates from Sorted Array | Easy | [✅](src/j/easy/_0026_RemoveDuplicatesFromSortedArray.java) | [✅](src/k/easy/_0026_RemoveDuplicatesFromSortedArray.kt) | 原地双指针 |
+| 42 | Trapping Rain Water | Hard | - | [✅](src/k/medium/_0042_M_TrappingRainWater.kt) | 双指针；[题解](src/k/solutions/_0042_M_TrappingRainWater.md) |
 | 75 | Sort Colors | Medium | [✅](src/j/medium/_0075_SortColors.java) | [✅](src/k/medium/_0075_SortColors.kt) | 三指针 / 荷兰国旗 |
 | 125 | Valid Palindrome | Easy | [✅](src/j/easy/_0125_ValidPalindrome.java) | [✅](src/k/medium/_0125_ValidPalindrome.kt) | 字符串双指针 |
 | 283 | Move Zeroes | Easy | [✅](src/j/easy/_0283_MoveZeroes.java) | - | 原地移动 |
@@ -73,13 +74,13 @@ Java / Kotlin LeetCode 练习记录，按题目主类型分类。
 
 | 题号 | 题目 | 难度 | Java | Kotlin | 题解 | 备注 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 200 | Number of Islands | Medium | [✅](src/j/medium/_0200_NumberofIslands.java) | [🚧](src/k/medium/_0200_NumberofIslands.kt) | [✅](src/k/solutions/_0200_NumberofIslands.md) | DFS 网格连通块 |
+| 200 | Number of Islands | Medium | [✅](src/j/medium/_0200_NumberofIslands.java) | [✅](src/k/medium/_0200_M_NumberOfIslands.kt) | [✅](src/k/solutions/_0200_NumberofIslands.md) | DFS 网格连通块 |
 
 ## 区间
 
 | 题号 | 题目 | 难度 | Java | Kotlin | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| 56 | Merge Intervals | Medium | [✅](src/j/medium/_0056_Merge_Intervals.java) | [✅](src/k/_0056_Merge_Intervals.kt) | 排序 + 合并 |
+| 56 | Merge Intervals | Medium | [✅](src/j/medium/_0056_Merge_Intervals.java) | [✅](src/k/medium/_0056_Merge_Intervals.kt) | 排序 + 合并 |
 
 ## 位运算
 
@@ -91,8 +92,8 @@ Java / Kotlin LeetCode 练习记录，按题目主类型分类。
 
 | 指标 | 数量 |
 | --- | ---: |
-| 已归档题目 | 28 |
+| 已归档题目 | 29 |
 | Java 已完成 | 28 |
-| Kotlin 已完成 | 13 |
-| Kotlin 待完善 | 1 |
-| Markdown 题解 | 1 |
+| Kotlin 已完成 | 15 |
+| Kotlin 待完善 | 0 |
+| Markdown 题解 | 2 |

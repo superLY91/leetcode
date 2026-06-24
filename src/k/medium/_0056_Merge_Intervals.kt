@@ -1,4 +1,4 @@
-package k
+package k.medium
 
 /**
  * 56. Merge Intervals（合并区间）

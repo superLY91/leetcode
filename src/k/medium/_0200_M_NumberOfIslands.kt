@@ -1,6 +1,8 @@
 package k.medium
 
 /**
+ * https://leetcode.cn/problems/number-of-islands/
+ *
  * 200 Number of Islands
  *
  * 给你一个由 '1'（陆地）和 '0'（水）组成的的二维网格，请你计算网格中岛屿的数量。
@@ -44,36 +46,39 @@ package k.medium
  * 时间复杂度： O(m*n)
  * 空间复杂度： O(m*n)
  */
-class Solution {
-    fun numIslands(grid: Array<CharArray>): Int {
-        var count = 0
+class _0200_M_NumberOfIslands {
 
-        for (row in grid.indices) {
-            for (col in grid[0].indices) {
-                if (grid[row][col] == '1') {
-                    count++
-                    dfs(grid, row, col)
+    class Solution {
+        fun numIslands(grid: Array<CharArray>): Int {
+            var count = 0
+
+            for (row in grid.indices) {
+                for (col in grid[0].indices) {
+                    if (grid[row][col] == '1') {
+                        count++
+                        dfs(grid, row, col)
+                    }
                 }
             }
+            return count
         }
-        return count
-    }
 
-    private fun dfs(grid: Array<CharArray>, row: Int, col: Int) {
-        if (row !in grid.indices || col !in grid[0].indices) return
-        if (grid[row][col] != '1') return
+        private fun dfs(grid: Array<CharArray>, row: Int, col: Int) {
+            if (row !in grid.indices || col !in grid[0].indices) return
+            if (grid[row][col] != '1') return
 
-        grid[row][col] = '0'
+            grid[row][col] = '0'
 
-        dfs(grid, row - 1, col)
-        dfs(grid, row + 1, col)
-        dfs(grid, row, col - 1)
-        dfs(grid, row, col + 1)
+            dfs(grid, row - 1, col)
+            dfs(grid, row + 1, col)
+            dfs(grid, row, col - 1)
+            dfs(grid, row, col + 1)
+        }
     }
 }
 
 fun main() {
-    val solution = Solution()
+    val solution = _0200_M_NumberOfIslands.Solution()
 
     test(
         solution.numIslands(
